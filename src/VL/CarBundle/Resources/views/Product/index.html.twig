@@ -1,0 +1,49 @@
+{% extends '::base.html.twig' %}
+
+{% block content -%}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 slon container-fluid">
+    <h1>Product list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Names</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('vl_product_show', { 'id': entity.id }) }}">{{ entity.id }}&nbsp;&nbsp;</a></td>
+                <td>{{ entity.names }}&nbsp;&nbsp;</td>
+                <td>{{ entity.price }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('vl_product_show', { 'id': entity.id }) }}">show&nbsp;&nbsp;</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('vl_product_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('vl_product_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+        </div>
+    </div>
+</div>
+    {% endblock %}

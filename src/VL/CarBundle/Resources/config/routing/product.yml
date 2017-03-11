@@ -1,0 +1,30 @@
+vl_product:
+    path:     /
+    defaults: { _controller: "VLCarBundle:Product:index" }
+
+vl_product_show:
+    path:     /{id}/show
+    defaults: { _controller: "VLCarBundle:Product:show" }
+
+vl_product_new:
+    path:     /new
+    defaults: { _controller: "VLCarBundle:Product:new" }
+
+vl_product_create:
+    path:     /create
+    defaults: { _controller: "VLCarBundle:Product:create" }
+    methods:  POST
+
+vl_product_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "VLCarBundle:Product:edit" }
+
+vl_product_update:
+    path:     /{id}/update
+    defaults: { _controller: "VLCarBundle:Product:update" }
+    methods:  [POST, PUT]
+
+vl_product_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "VLCarBundle:Product:delete" }
+    methods:  [POST, DELETE]

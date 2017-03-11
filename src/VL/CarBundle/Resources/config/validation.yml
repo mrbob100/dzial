@@ -1,0 +1,8 @@
+VL\CarBundle\Entity\Product:
+    properties:
+          type:
+              - NotBlank: ~
+          names:
+              - NotBlank: ~
+          price:
+              - NotBlank: ~

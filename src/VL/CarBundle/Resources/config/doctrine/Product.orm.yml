@@ -1,0 +1,28 @@
+VL\CarBundle\Entity\Product:
+    type: entity
+    repositoryClass: VL\CarBundle\Repository\ProductRepository
+    table: products
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+
+        names:
+            type: string
+            length: 255
+            unique: true
+
+        price:
+            type: float(11,2)
+            nullable: true
+
+    manyToOne:
+        types:
+            targetEntity: Type
+            inversedBy: products
+            joinColumn:
+                name: type_id
+                referencedColumnName: id
+
+

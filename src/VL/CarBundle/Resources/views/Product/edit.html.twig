@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block content -%}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 slon container-fluid">
+    <h1>Product edit</h1>
+
+    {{ form(edit_form) }}
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('vl_product') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

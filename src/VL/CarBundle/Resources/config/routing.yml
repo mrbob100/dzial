@@ -1,0 +1,13 @@
+#vl_car_vl_product:
+#    resource: "@VLCarBundle/Resources/config/routing/product.yml"
+ #   prefix:   /vl_product
+
+vl_car_homepage:
+   path:     /hello/{name}
+   defaults: { _controller: VLCarBundle:Default:index }
+
+VLCarBundle_product:
+   resource: "@VLCarBundle/Resources/config/routing/product.yml"
+   prefix: /product
+
+

@@ -1,0 +1,24 @@
+VL\CarBundle\Entity\Type:
+    type: entity
+    repositoryClass: VL\CarBundle\Repository\TypeRepository
+    table: types
+    id:
+        id:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        names:
+            type: string
+            length: 255
+            unique: true
+
+
+    oneToMany:
+        products:
+            targetEntity: Product
+            mappedBy: types
+
+
+
+
+
