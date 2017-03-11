@@ -8,6 +8,6 @@ vl_car_homepage:
 
 VLCarBundle_product:
    resource: "@VLCarBundle/Resources/config/routing/product.yml"
-   prefix: /product
+   prefix: /
 
 
